@@ -1,0 +1,50 @@
+.main_login_form {
+  display: flex;
+  justify-content: center; /* Центрування по горизонталі */
+  align-items: center;     /* Центрування по вертикалі */
+  height: 100%;
+
+  .login_form {
+    width: 440px;
+    height: 400px;
+    margin-top: 300px;
+    background-color: white;
+    text-align: center;
+    border: 1px solid #ccc;
+    font-weight: lighter;
+
+    form {
+      margin-top: 40px;
+
+      h3 {
+        font-size: 25px;
+      }
+    }
+
+    .login_form_input {
+      width: 344px;
+      height: 44px;
+      border: solid 1px gray;
+      border-radius: 10px;
+
+      .label-container {
+        z-index: 1;
+      }
+      label {
+        display: block;
+      }
+
+    }
+
+    button {
+      width: 344px;
+      height: 48px;
+      text-align: center;
+      background-color: #1672EC;
+      border: solid 1px gray;
+      border-radius: 10px;
+      color: white;
+    }
+
+  }
+}
