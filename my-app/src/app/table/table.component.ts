@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { MatTableDataSource } from '@angular/material/table';
-import { TABLE_DATA } from './table-data'; // Импортируйте ваши данные
+import {Component, OnInit} from '@angular/core';
+import {MatTableDataSource} from '@angular/material/table';
+import {TABLE_DATA, TableDataKeys, TableDataKeysArray} from './table-data';
 
 @Component({
   selector: 'app-table',
@@ -9,19 +9,17 @@ import { TABLE_DATA } from './table-data'; // Импортируйте ваши 
 })
 export class TableComponent implements OnInit {
 
-  columnNames: { [key: string]: string } = {
-  column1:  'Product Code',
-  column2:  'Name',
-  column3:  'Unit',
-  column4:  'Price',
-  column5:  'Availability',
-  column6:  'Action'
-}
-  displayedColumns: string[] = ['column1', 'column2', 'column3', 'column4', 'column5', 'column6'];
+  columnNames: Record<TableDataKeys, string >= {
+    productCode: 'ProductCode',
+    name: 'Name',
+    unit: 'Unit',
+    price: 'Price',
+    availability: 'Availability',
+    action: 'Action'
+  }
+  displayedColumns: TableDataKeysArray = ["productCode", "name", "unit", "price", "availability", "action"]
   dataSource = new MatTableDataSource(TABLE_DATA);
 
   ngOnInit() {
-
   }
-
 }
